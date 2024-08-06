@@ -1,5 +1,5 @@
 {
-  "name": "react-photo-album",
+  "name": "react-photo-album-with-react-window",
   "version": "0.0.0-semantic-release",
   "description": "Responsive photo gallery component for React",
   "author": "Igor Danchenko",
@@ -122,6 +122,7 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@types/react-test-renderer": "^18.3.0",
+    "@types/react-window": "^1.8.8",
     "@typescript-eslint/eslint-plugin": "^7.17.0",
     "@typescript-eslint/parser": "^7.17.0",
     "@vitejs/plugin-react": "^4.3.1",
@@ -176,5 +177,9 @@
     "react image gallery",
     "react-photo-album",
     "react-photo-gallery"
-  ]
+  ],
+  "dependencies": {
+    "react-virtualized-auto-sizer": "^1.0.24",
+    "react-window": "^1.8.10"
+  }
 }

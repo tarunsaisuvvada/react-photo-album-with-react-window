@@ -59,6 +59,19 @@ export interface RowsPhotoAlbumProps<TPhoto extends Photo = Photo> extends Commo
   targetRowHeight?: ResponsiveParameter;
   /** Additional row constraints. */
   rowConstraints?: ResponsiveParameter<RowConstraints>;
+
+  onItemsRendered?: (props: {
+    overscanStartIndex: number;
+    overscanStopIndex: number;
+    visibleStartIndex: number;
+    visibleStopIndex: number;
+  }) => void;
+  onScroll?: (props: {
+    scrollDirection: "forward" | "backward";
+    scrollOffset: number;
+    scrollUpdateWasRequested: boolean;
+  }) => void;
+  scrollToIndex?: number;
 }
 
 /** Columns photo album props */
