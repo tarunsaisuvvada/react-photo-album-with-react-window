@@ -104,6 +104,12 @@ function StaticPhotoAlbum<TPhoto extends Photo>(
     }
   }, [scrollToIndex]);
 
+  useEffect(() => {
+    if (listRef.current) {
+      listRef.current.resetAfterIndex(0);
+    }
+  }, [tracks]);
+
   const getItemSize = useCallback(
     (index: number) => {
       return round(tracks[index].photos[0].height, 3) + (padding || 0) * 2 + (spacing || 0);
